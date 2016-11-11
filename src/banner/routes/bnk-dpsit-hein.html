@@ -1,0 +1,34 @@
+{% extends "templates/base.html" %}
+{% block content %}
+{% if form.error %}				<!-- #1 -->
+<p class="bg-danger">{{form.error}}</p>
+{% endif %}
+<div class="col-sm-6 col-md-4">
+<h1>Depósito</h1>
+<form role="form" method="post" class="add-fin_move">
+    <div class="form-group">
+        <label for="fin_release">Valor</label>
+        <ul class="errors">
+            {% for e in form.validation-errors.fin_release %}
+            <li>{{e}}</li>
+            {% endfor %}
+        </ul>
+        <input type="input" name="fin_release" class="form-control" id="fin_release" value="{{ form.new.fin_release }}">
+    </div>
+    <div class="form-group">
+        <label for="release_date">Data</label>
+        <ul class="errors">
+            {% for e in form.validation-errors.release_date %}
+            <li>{{e}}</li>
+            {% endfor %}
+        </ul>
+        <input type="date" name="release_date" class="form-control" id="release_date" value="{{ form.new.release_date }}">
+        <p class="help-block">yyyy-mm-dd</p>
+    </div>
+    <div class="form-group submit">
+        <button type="submit" class="btn btn-success">Confirma</button>
+        <a button type="submit" class="btn btn-danger" href="{{servlet-context}}/client/recently-added/banner">Cancela</button></a>
+    </div>
+</form>
+</div>
+{% endblock %}

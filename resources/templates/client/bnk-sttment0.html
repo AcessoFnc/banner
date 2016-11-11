@@ -1,0 +1,62 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h2>Extrato</h2>
+<!--<div class="col-sm-6 col-md-4">-->    <!--#1-->
+
+<div class="ca_id"><font size="5"><b>{{a.ca_id}}</b></font></div>
+
+<!--<ol class="client">
+    {% for a in client %}
+    <li>-->
+        <!--<div class="cli_mov">-->
+            <!--<a href="{{servlet-context}}/client/{{a.client_name}}">{{a.client_name}}</a></div>-->
+
+
+
+        <div class="release_date">{{a.release_date}} <class="fin_release">{{a.fin_release}}</div>
+
+
+
+
+    <!--</li>
+    {% endfor %}
+</ol>-->
+
+
+<!--<div class="form-group submit_btton">-->
+    <a button type="submit" class="btn btn-primary" href="{{servlet-context}}/client/recently-added/banner">Retornar para a tela do cliente</button></a>
+<!--</div>-->
+
+
+    <!--</li>
+    {% endfor %}
+</ol>-->
+<!--</div>-->
+<!--<h1>Contas</h1>-->
+<!--<div class="col-sm-6 col-md-4">-->
+
+
+<!--</div>-->                         <!--#1-->
+
+<!--
+<h3>Contas</h3>
+<div class="col-sm-6 col-md-4">
+        <label >Conta</label>
+        <div class="ca_id">{{a.ca_id}}</div>
+        <p></p>
+        <label >Saldo</label>
+        <div class="fb">{{a.fb}}</div>
+</div>-->
+<!--<div class="col-sm-6 col-md-4">
+    {% with form=form %}
+    {% include "templates/client/cli-ca.html" %}
+    {% endwith %}-->
+    <!--<div class="client_name"><b>{{a.client_name}}</b></div>
+    <p></p>
+    <label >CPF</label>
+    <div class="cpf">{{a.cpf}}</div>
+    <p></p>
+    <label >Data de Nascimento</label>
+    <div class="birth_date">{{a.birth_date}}</div>
+</div>-->
+{% endblock %}

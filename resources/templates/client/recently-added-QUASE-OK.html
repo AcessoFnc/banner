@@ -1,0 +1,41 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>Cliente</h1>
+<div class="col-sm-6 col-md-4">
+<!--<ol class="client">
+    {% for a in client %}
+    <li>
+        <div class="client">-->
+            <!--<a href="{{servlet-context}}/client/{{a.client_name}}">{{a.client_name}}</a></div>-->
+        <div class="client_name"><b>{{a.client_name}}</b></div>
+        <p></p>
+        <label >CPF</label>
+        <div class="cpf">{{a.cpf}}</div>
+        <p></p>
+        <label >Data de Nascimento</label>
+        <div class="birth_date">{{a.birth_date}}</div>
+    <!--</li>
+    {% endfor %}
+</ol>-->
+</div>
+<h1>Contas</h1>
+<div class="col-sm-6 col-md-4">
+        <label >Conta TESTE 2</label>
+        <div class="ca_id">{{a.ca_id}}</div>
+        <p></p>
+        <label >Saldo TESTE 2</label>
+        <div class="fb">{{a.fb}}</div>
+</div>
+<!--<div class="col-sm-6 col-md-4">
+    {% with form=form %}
+    {% include "templates/client/cli-ca.html" %}
+    {% endwith %}-->
+    <!--<div class="client_name"><b>{{a.client_name}}</b></div>
+    <p></p>
+    <label >CPF</label>
+    <div class="cpf">{{a.cpf}}</div>
+    <p></p>
+    <label >Data de Nascimento</label>
+    <div class="birth_date">{{a.birth_date}}</div>
+</div>-->
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "templates/base.html" %}
+{% block content %}
+  <div class="jumbotron">
+    <h1>Bem-vindo ao Banner!</h1>
+    <p>Entre usando uma dessas formas:</p>
+      <p><a class="btn btn-success btn-lg" href="{{servlet-context}}/signup">Inscreva-se</a>
+        ou
+          <a class="btn btn-primary btn-lg" href="{{servlet-context}}/login">Login</a></p>
+  </div>
+{% endblock %}

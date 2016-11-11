@@ -1,0 +1,21 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>Lançamentos</h1>
+<div class="col-sm-6 col-md-4">
+<ol class="fin_moves">
+    {% for a in fin_moves %}
+    <li>
+        <div class="client">
+            <a href="{{servlet-context}}/fin_moves/{{a.client}}">{{a.client}}</a></div>
+        <div class="fin_move-name">{{a.fin_move_name}}</div>
+        <div class="release-date">{{a.release_date}}</div>
+    </li>
+    {% endfor %}
+</ol>
+</div>
+<div class="col-sm-6 col-md-4">
+    {% with form=form %}
+    {% include "templates/fin_moves/add-fin_move.html" %}
+    {% endwith %}
+</div>
+{% endblock %}

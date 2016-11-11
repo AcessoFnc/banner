@@ -1,0 +1,14 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>{{client}}</h1>
+<ol class="fin_moves">
+    {% for a in fin_moves %}
+    <li>
+        <div class="client">
+            <a href="{{servlet-context}}/fin_moves/{{a.client}}">{{a.client}}</a></div>
+        <div class="fin_move-name">{{a.fin_move_name}}</div>
+        <div class="release-date">Released {{a.release_date}}</div>
+    </li>
+    {% endfor %}
+</ol>
+{% endblock %}

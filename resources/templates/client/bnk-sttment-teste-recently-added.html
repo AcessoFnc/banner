@@ -1,0 +1,39 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>Extrato</h1>
+<div class="col-sm-6 col-md-4">
+<!--<ol class="client">
+    {% for a in client %}
+    <li>
+        <div class="client">-->
+            <!--<a href="{{servlet-context}}/client/{{a.client_name}}">{{a.client_name}}</a></div>-->
+        <div class="client_name"><font size="5"><b>{{a.client_name}}</b></font></div>
+        <p></p>
+        <label >CPF</label>
+        <div class="cpf">{{a.cpf}}</div>
+        <p></p>
+        <label >Data de Nascimento</label>
+        <div class="birth_date">{{a.birth_date}}</div>
+
+
+        <h2>Contas</h2>
+
+        <label >Conta</label>
+        <div class="ca_id">{{a.ca_id}}</div>
+        <p></p>
+        <label >Saldo</label>
+        <div class="fb">{{a.fb}}</div>
+
+
+
+    <a button type="submit" class="btn btn-primary" href="{{servlet-context}}/client/bnk-sttment">Extrato</button></a>
+    <button type="submit" class="btn btn-danger">Saque</button>
+    <button type="submit" class="btn btn-success">Depósito</button>
+<!--</div>-->
+
+
+
+</div>
+
+
+{% endblock %}

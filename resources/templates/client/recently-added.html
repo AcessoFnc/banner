@@ -1,0 +1,35 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>Cliente</h1>
+<div class="col-sm-6 col-md-4">
+<ol class="client">
+  {% for a in client %}
+    <!--<li>-->
+        <div class="client_name"><font size="5"><b>{{a.client_name}}</b></font></div>
+        <p></p>
+        <label >CPF</label>
+        <div class="cpf">{{a.cpf}}</div>
+        <p></p>
+        <label >Data de Nascimento</label>
+        <div class="birth_date">{{a.birth_date}}</div>
+
+        <h2>Conta</h2>
+
+        <label >Conta</label>
+        <div class="ca_id">{{a.ca_id}}</div>
+        <p></p>
+        <label >Saldo</label>
+        <div class="fb">{{a.fb}}</div>
+    <!--</li>-->
+  {% endfor %}
+</ol>
+
+<div class="form-group submit_btton">
+    <a button type="submit" class="btn btn-primary" href="{{servlet-context}}/client/bnk-sttment">Extrato</button></a>
+    <a button type="submit" class="btn btn-danger" href="{{servlet-context}}/client/get-money">Saque</button></a>
+    <a button type="submit" class="btn btn-success" href="{{servlet-context}}/client/bnk-dpsit">Depósito</button></a>
+</div>
+
+</div>
+
+{% endblock %}

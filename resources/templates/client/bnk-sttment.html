@@ -1,0 +1,23 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>Extrato</h1>
+<div class="col-sm-6 col-md-4">
+<ol class="client">
+    {% for a in client %}
+        <!--<div class="client_name"><font size="5"><b>{{a.client_name}}</b></font></div>-->
+
+        <!--<label >Conta</label>-->
+        <!--<div class="ca_id"><font size="5">{{a.ca_id}}</font></div>-->
+
+        <!--<li>-->
+            <div class="release_date"><font size="4">{{a.release_date}} <class="fin_release">{{a.fin_release}}</font></div>
+        <!--</li>-->
+    {% endfor %}
+</ol>
+
+<!--<div class="form-group bnk-sttment-submit_btton">-->
+    <a button type="submit" class="btn btn-primary" href="{{servlet-context}}/client/recently-added/banner">Retornar para a tela do cliente</button></a>
+<!--</div>-->
+
+</div>
+{% endblock %}
